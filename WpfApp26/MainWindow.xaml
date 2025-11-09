@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfApp26.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp26"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <TextBox x:Name="First" Margin="5" Width="650"/>
+            <TextBox x:Name="Second" Margin="5" Width="650"/>
+            <Button x:Name="Count" Content="Вычисления суммы" Margin="5" Click="CountClick" Width="650"/>
+            <ProgressBar x:Name="ProgressBar" Height="10" Margin="5" Width="650"/>
+            <TextBlock Text="Результат суммы: " Margin="10" x:Name="Result"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1">
+            <Button x:Name="Upload" Content="Загрузка данных" Click="UploadClick" Margin="5" Width="650"/>
+            <TextBlock x:Name="Status" Text="Ожидание загрузки"/>
+            <TextBox x:Name="JsonData" TextWrapping="Wrap" AcceptsReturn="True" 
+            Height="100" Margin="2" VerticalScrollBarVisibility="Auto"
+            IsReadOnly="True"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2">
+            <Button x:Name="Break" Content="Запуск блокирующих операций" Click="BreakClick" Margin="5" Width="650"/>
+            <TextBlock x:Name="Text" Text="Статус выполнения операций"/>
+            <Button x:Name="Clear" Content="Очистить" Margin="20" Click="ClearClick" Background="Red" Width="650"/>
+        </StackPanel>
+    </Grid>
+</Window>
