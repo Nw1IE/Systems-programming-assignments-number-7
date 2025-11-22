@@ -18,20 +18,20 @@
             <TextBox x:Name="Second" Margin="5" Width="650"/>
             <Button x:Name="Count" Content="Вычисления суммы" Margin="5" Click="CountClick" Width="650"/>
             <ProgressBar x:Name="ProgressBar" Height="10" Margin="5" Width="650"/>
-            <TextBlock Text="Результат суммы: " Margin="10" x:Name="Result"/>
+            <TextBlock Text="Результат суммы: " Margin="10" x:Name="Result" Width="650"/>
         </StackPanel>
 
         <StackPanel Grid.Row="1">
             <Button x:Name="Upload" Content="Загрузка данных" Click="UploadClick" Margin="5" Width="650"/>
-            <TextBlock x:Name="Status" Text="Ожидание загрузки"/>
+            <TextBlock x:Name="Status" Text="Ожидание загрузки" Width="650"/>
             <TextBox x:Name="JsonData" TextWrapping="Wrap" AcceptsReturn="True" 
-            Height="100" Margin="2" VerticalScrollBarVisibility="Auto"
+            Height="92" Margin="2" VerticalScrollBarVisibility="Auto"
             IsReadOnly="True"/>
         </StackPanel>
 
         <StackPanel Grid.Row="2">
             <Button x:Name="Break" Content="Запуск блокирующих операций" Click="BreakClick" Margin="5" Width="650"/>
-            <TextBlock x:Name="Text" Text="Статус выполнения операций"/>
+            <TextBlock x:Name="Text" Text="Статус выполнения операций" Width="650"/>
             <Button x:Name="Clear" Content="Очистить" Margin="20" Click="ClearClick" Background="Red" Width="650"/>
         </StackPanel>
     </Grid>
